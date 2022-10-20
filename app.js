@@ -88,5 +88,5 @@ app.post("/contact",(req,res)=>{
 })
 
 app.listen(port , ()=>{
-    console.log(`server is running on http://localhost:${port}`)
+    console.log(`server is running on ${port}`)
 })
