@@ -24,7 +24,7 @@ body{
  }
 
 *::selection{
-  background:var(--orange);
+  background:#1bb5ae;
   color:#fff;
 }
 
@@ -47,7 +47,7 @@ section{
 .heading span{
   font-size: 3.5rem;
   /* background:rgba(255, 165, 0,.2); */
-  color:var(--orange);
+  color:#1bb5ae;
   border-radius: .5rem;
   padding:.2rem 1rem;
 }
@@ -59,17 +59,17 @@ section{
 .btn{
   display: inline-block;
   margin-top: 1.5rem;
-  background:var(--orange);
-  color:#fff;
+  background:#1bb5ae;
+  color:rgb(255, 255, 255);
   padding:.8rem 3rem;
-  border:.2rem solid var(--orange);
+  /* border:.2rem solid #1bb5ae; */
   cursor: pointer;
   font-size: 1.7rem;
 }
 
 .btn:hover{
-  background:rgba(255, 165, 0,.2);
-  color:var(--orange);
+  background:#8efff9;
+  color:#000000;
 }
 
 /* <------header---------> */
@@ -104,7 +104,7 @@ header .logo1 img
 header .logo span{
   margin-left: -5rem;
   font-size: 3.5rem;
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 header .navbar a{
@@ -114,7 +114,7 @@ header .navbar a{
 }
 
 header .navbar a:hover{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 header .icons i{
@@ -125,7 +125,7 @@ header .icons i{
 }
 
 header .icons i:hover{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 header .search-bar-container{
@@ -161,7 +161,7 @@ header .search-bar-container label{
 }
 
 header .search-bar-container label:hover{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 .login-form-container{
@@ -210,7 +210,7 @@ header .search-bar-container label:hover{
 }
 
 .login-form-container form .box:focus{
-  border-color: var(--orange);;
+  border-color: #1bb5ae;;
 }
 
 .login-form-container form #remember{
@@ -233,7 +233,7 @@ header .search-bar-container label:hover{
 }
 
 .login-form-container form p a{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 .login-form-container form p a:hover{
@@ -321,7 +321,7 @@ header .search-bar-container label:hover{
 }
 
 .home .controls .vid-btn.active{
-  background:var(--orange);
+  background:#1bb5ae;
 }
 
 .packages .box-container{
@@ -334,9 +334,9 @@ header .search-bar-container label:hover{
 
 .packages .box-container .box{
   flex:1 1 30rem;
-  border-radius: .5rem;
+  border-radius: 4rem;
   overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  box-shadow: 0 2.5rem   1.5rem rgba(0,0,0,.1);
 }
 
 .packages .box-container .box img{
@@ -355,7 +355,7 @@ header .search-bar-container label:hover{
 }
 
 .packages .box-container .box .content h3 i{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 .packages .box-container .box .content h3 a :target{
   scroll-behavior: smooth;
@@ -368,7 +368,7 @@ header .search-bar-container label:hover{
 
 .packages .box-container .box .content .stars i{
   font-size:1.7rem;
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 .packages .box-container .box .content .price{
@@ -401,7 +401,7 @@ header .search-bar-container label:hover{
 .services .box-container .box i{
   padding:1rem;
   font-size: 5rem;
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 .services .box-container .box h3{
@@ -430,8 +430,8 @@ header .search-bar-container label:hover{
 .gallery .box-container .box{
   overflow: hidden;
   box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
-  border:1rem solid #fff;
-  border-radius: .5rem;
+  /* border:1rem solid #fff; */
+  border-radius: 3.2rem;
   flex:1 1 30rem;
   height: 25rem;
   position: relative;
@@ -460,7 +460,7 @@ header .search-bar-container label:hover{
 
 .gallery .box-container .box .content h3{
   font-size: 2.5rem;
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 .gallery .box-container .box .content p{
@@ -600,7 +600,7 @@ header .search-bar-container label:hover{
 }
 
 .footer .box-container .box a:hover{
-  color:var(--orange);
+  color:#1bb5ae;
   text-decoration: underline;
 }
 
@@ -615,7 +615,7 @@ header .search-bar-container label:hover{
 }
 
 .footer .credit span{
-  color:var(--orange);
+  color:#1bb5ae;
 }
 
 
