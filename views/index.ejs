@@ -89,6 +89,7 @@ section{
   /* border:.2rem solid #1bb5ae; */
   cursor: pointer;
   font-size: 1.7rem;
+  border-radius:0.7rem;
 }
 
 .btn:hover{
@@ -107,7 +108,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:2rem 8%;
+  padding:2rem 20%;
 }
 
 header .logo{
@@ -187,6 +188,50 @@ header .search-bar-container label{
 header .search-bar-container label:hover{
   color:#1bb5ae;
 }
+#-------togle-------
+
+.togg
+{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4070f4;
+  transition: all 0.3s ease-in-out;
+}
+.togg.dark
+{
+  background-color: #18191a;
+}
+.togg .toggle {
+  position: relative;
+  height: 130px;
+  width: 300px;
+  border-radius: 100px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.togg .toggle::before {
+  content: "";
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  background: #4070f4;
+  border-radius: 50%;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+.togg .toggle.active::before {
+  background-color: #18191a;
+  left: calc(100% - 110px - 14px);
+font-family: 'Poppins', sans-serif;
+}
+
+
+/* <------login---------> */
 
 .login-form-container{
   position: fixed;
@@ -199,9 +244,6 @@ header .search-bar-container label:hover{
   align-items: center;
   justify-content: center;
 }
-
-/* <------login---------> */
-
 
 .login-form-container.active{
   top:0;
@@ -302,17 +344,17 @@ header .search-bar-container label:hover{
 .home .content h3{
   font-size: 4.5rem;
   border-color: black ;
-  color:rgb(77, 77, 79);
+  color:#ffffff;
   /* text-transform: uppercase; */
   text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 }
 
 .home .content p{
-  border-color: rgb(247, 5, 5);
+  border-color: blue;
   border-radius: 1rem;
   font-size: 3rem;
   /* text-align: right; */
-  color:rgb(12, 12, 12);
+  color:rgb(255, 255, 255);
   padding:.3rem 0;
   text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 }
@@ -332,20 +374,6 @@ header .search-bar-container label:hover{
   /* background:rgba(0,0,0,.7); */
   position: relative;
   top:10rem;
-}
-
-.home .controls .vid-btn{
-  height:2rem;
-  width:2rem;
-  display: inline-block;
-  border-radius: 50%;
-  background:rgb(254, 254, 253);
-  cursor: pointer;
-  margin:0 .5rem;
-}
-
-.home .controls .vid-btn.active{
-  background:#1bb5ae;
 }
 
 .packages .box-container{
@@ -470,10 +498,10 @@ header .search-bar-container label:hover{
   flex:1 1 30rem;
   height: 25rem;
   position: relative;
+  border-radius:0.9rem;
 }
 
 .gallery .box-container .box img{
-  
   height: 100%;
   width:100%;
   object-fit: cover;
@@ -774,6 +802,10 @@ header .search-bar-container label:hover{
         <label for="search-bar" class="fas fa-search"></label>
     </form>
 
+  <!-- <div class="togg">
+    <div class="toggle"></div>
+  </div> -->
+
 </header>
 
 <!-- header section ends -->
@@ -808,15 +840,11 @@ header .search-bar-container label:hover{
     </div>
 
     <div class="controls">
-        <span class="vid-btn" data-src="production ID_4611893.mp4"></span>        
-        <span class="vid-btn" data-src="Pexels Videos 1660911.mp4"></span>
-        <span class="vid-btn active" data-src="video (1).mp4"></span>
-        <span class="vid-btn" data-src="Outside View Of An Airplane Wing.mp4"></span>
-        <span class="vid-btn" data-src="video.mp4"></span>
+        <span class="vid-btn activ" data-src="Video\Dubai.mp4"></span>        
     </div>
 
     <div class="video-container">
-        <video src="video (1).mp4" id="video-slider" loop autoplay muted></video>
+        <video src="Video\Dubai.mp4" id="Dubai.mp4" loop autoplay muted></video>
     </div>
 
 </section>
@@ -841,7 +869,7 @@ header .search-bar-container label:hover{
 
     <div class="box-container">
         <div class="box"> 
-            <img src="India.jpg" alt="">
+            <img src="IMG/India.jpg" alt="">
             <div class="content">
                 <h3> <a href="https://goo.gl/maps/bNe5mtB7edQx11BAA/" target="_blank"><i class="fas fa-map-marker-alt"></i></a> INDIA </h3>
                 <p>Visit This Most Beautiful place and Know About Diffrent Cluture Activities in the World Each and every 28 states and 7 union territories of India.Click the Location button</p>
@@ -858,7 +886,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="Dubai.jpg" alt="">
+            <img src="IMG/Dubai.jpg" alt="">
             <div class="content">
                 <h3>  <a  href="https://goo.gl/maps/QSv1ugK1vxmPz96C6/" target="_blank"><i class="fas fa-map-marker-alt"></i></a> DUBAI </h3>
                 <p>Dubai is a city and Emirates in the United Arab Emirates And Burj Khalifa 830m-tall tower, dominates the skyscraper-filled skyline and More.Click the location button</p>
@@ -875,7 +903,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="HongKong.jpg" alt="">
+            <img src="IMG/HongKong.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/NmsPodDBPHVjvNaZ8/" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> HONKONG </h3>
                 <p>HongKong is the Place of China.It is The Famous for Buddha temple And See The DisneyLand Most International Human Are Travel To HongKong.Click The location Button</p>
@@ -892,7 +920,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="paris.jpg" alt="">
+            <img src="IMG/paris.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/n9KeasrxzGg4teho6/" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> PARIS </h3>
                 <p>Paris is The Most Colded Place In The World And Afil-Tower IS Most Attraction Of the Paris in The World Visit The  Most Beautiful Places.Click The Loaction button.</p>
@@ -909,7 +937,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="tokyo.jpg" alt="">
+            <img src="IMG/tokyo.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/Acufi34qVRgvjBu37" target="_blank"><i class="fas fa-map-marker-alt"></i></a> TOKYO </h3>
                 <p>Tokyo City is Of The Japan And Enjoy Nature And Arts.It is Know About Technologies And Visit The Most Intersting Place SkyTree.Click The Loaction Button</p>
@@ -926,7 +954,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="Egypt.jpg" alt="">
+            <img src="IMG/Egypt.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/snnSaeccSrkt2tH6A" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> EGYPT </h3>
                 <p>Egypt is city of The Africa.It Is Famous For Pyramids of Giza,in Pyramids And More Historical Place.Click The Location Button</p>
@@ -946,7 +974,7 @@ header .search-bar-container label:hover{
 
 
         <div class="box">
-            <img src="NEW-ZEALAND.jpg" alt="">
+            <img src="IMG/NEW-ZEALAND.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/BP8y9Se3rUBQuSUw9" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> NEW-ZEALAND </h3>
                 <p>New Zealand lies in the Pacific Ocean, to the southwest. New Zealand promises beautiful landscapes and serene.</p>
@@ -964,7 +992,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="rome.jpg" alt="">
+            <img src="IMG/rome.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/zUCdrWEcPyNgiRdS6" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> ROME </h3>
                 <p>This was originally called the Flavian Amphitheatre and was mostly used as public entertainment arena. The Colosseum is one of the most famous attractions in Rome.</p>
@@ -982,7 +1010,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="london.jpg" alt="">
+            <img src="IMG/london.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/jPzo1PvEMEDXQc2aA" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> LONDON </h3>
                 <p>Standing on the Thames River, London is the capital of England as well as the most populous city in Great Britain. The city is a confluence of the old.</p>
@@ -1000,7 +1028,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="austrelia.jpg" alt="">
+            <img src="IMG/austrelia.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/E5YqK1NBXS4H58Dk6" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> AUSTRELIA </h3>
                 <p>Stretching for 2300 kilometres off the east coast of Australia, the Great Barrier Reef is one of nature's greatest marvels. It is officially the biggest structure.</p>
@@ -1018,7 +1046,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="MALDIVES.jpg" alt="">
+            <img src="IMG/MALDIVES.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/YQSyJcWGnRuxTySL8" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> MALDIVES </h3>
                 <p>The Maldives, a tropical haven of immaculate beaches, are an archipelago of 1,192 coral islands grouped into natural atolls, out of which only a few are inhabited. Time stands still in the Maldives.</p>
@@ -1036,7 +1064,7 @@ header .search-bar-container label:hover{
         </div>
 
         <div class="box">
-            <img src="california.jpg" alt="">
+            <img src="IMG/california.jpg" alt="">
             <div class="content">
                 <h3> <a  href="https://goo.gl/maps/FXVVSADWg6XpX8XSA" target="_blank"> <i class="fas fa-map-marker-alt"></i></a> CALIFORNIA </h3>
                 <p>California is a state in the Western United States, located along the Pacific Coast. With nearly 39.2 million.</p>
@@ -1130,15 +1158,15 @@ header .search-bar-container label:hover{
     <div class="box-container">
 
         <div class="box">
-            <img src="1.jpg" alt="">
+            <img src="IMG/1.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <p>Ifhotos, then post it here And Your photos will be Share on our website.</p>
                 <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqSvjPCTmLmtssGPKPGNNhlRxdbxVQHbFRDcFjFXSWcsmmgJndkvfTbQjNqkCSTjNFRHQB" target="_blank" class="btn"> Shere Photos</a>
             </div>
         </div>
         <div class="box">
-            <img src="2.jpg" alt="">
+            <img src="IMG/2.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1146,7 +1174,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="3.jpg" alt="">
+            <img src="IMG/3.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1154,7 +1182,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="4.jpg" alt="">
+            <img src="IMG/4.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1162,7 +1190,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="5.jpg" alt="">
+            <img src="IMG/5.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1170,7 +1198,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="6.jpg" alt="">
+            <img src="IMG/6.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1178,7 +1206,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="7.jpg" alt=""> 
+            <img src="IMG/7.jpg" alt=""> 
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1186,7 +1214,7 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="8.jpg" alt="">
+            <img src="IMG/8.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
@@ -1194,35 +1222,35 @@ header .search-bar-container label:hover{
             </div>
         </div>
         <div class="box">
-            <img src="9.jpg" alt="">
+            <img src="IMG/9.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="#" class="btn">Shere Photos</a>
             </div>
         </div>
         <div class="box">
-            <img src="10.jpg" alt="">
+            <img src="IMG/10.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="#" class="btn">Shere Photos</a>
             </div>
         </div>
         <div class="box">
-            <img src="11.jpg" alt="">
+            <img src="IMG/11.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="#" class="btn">Shere Photos</a>
             </div>
         </div>
         <div class="box">
-            <img src="12.jpg" alt="">
+            <img src="IMG/12.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
-                <a href="#" class="btn">see more</a>
+                <p>If you have taken photos, then post it here And Your photos will be Share on our website.</p>
+                <a href="#" class="btn">Shere Photos</a>
             </div>
         </div>
 
@@ -1250,7 +1278,7 @@ header .search-bar-container label:hover{
     <div class="row">
 
         <div class="image">
-            <img src="Travel_C-removebg-preview.png" alt="">
+            <img src="IMG/bookn.png" alt="">
         </div>
 
         <form method="post" action="/form">
@@ -1297,7 +1325,7 @@ header .search-bar-container label:hover{
     <div class="row">
 
         <div class="image">
-            <img src="contact-us-removebg-preview.png" alt="">
+            <img src="IMG/cont.png" alt="">
         </div>
 
         <form method="post" action="/contact">
@@ -1492,6 +1520,31 @@ const container = document.querySelector(".container"),
             }) 
         })
     })
+
+
+
+    const body = document.querySelector("body"),
+    toggle = document.querySelector(".toggle");
+
+  let getMode = localStorage.getItem("mode");
+  if (getMode && getMode === "dark") {
+    body.classList.add("dark");
+    toggle.classList.add("active");
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (!body.classList.contains("dark")) {
+      return localStorage.setItem("mode", "light");
+    }
+    localStorage.setItem("mode", "dark");
+  });
+
+  toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+
+
+
 
     // js code to appear signup and login form
     signUp.addEventListener("click", ( )=>{
